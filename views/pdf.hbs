@@ -1,0 +1,27 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="/get-pdf" method="POST">
+      <input type="text" name="id" placeholder="id" />
+      <button>submit</button>
+    </form>
+    <h2>Name: {{body.name}}</h2>
+    <h2>Age: {{body.age}}</h2>
+    <h2>Blood Group: {{body.bp_type}}</h2>
+    <img
+      height="200"
+      width="200"
+      src="/uploads/{{body.file}}.{{body.ext}}"
+      alt="img"
+    />
+    <form action="/download-pdf" method="POST">
+      <button>Download PDF</button>
+    </form>
+
+  </body>
+</html>

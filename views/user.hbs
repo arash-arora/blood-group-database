@@ -1,0 +1,39 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Client Data</title>
+  </head>
+  <body>
+    <h1>Please fill data in the form below:</h1>
+    <form method="POST" action="/newuser" enctype="multipart/form-data">
+      <label>Name:<input type="text" name="name" required /></label>
+      <br />
+      <label>Username:<input type="string" name="username" required /></label>
+      <br />
+      <label>Phone Number:<input type="number" name="ph" required /></label>
+      <br />
+      <label>Age:<input type="number" name="age" required /></label>
+      <br />
+      <label>Blood Group:
+        <!-- <input type="text" name="bg" required> -->
+        <select name="bp_type" id="">
+          <option value="O+">O+</option>
+          <option value="A+">A+</option>
+          <option value="B+">B+</option>
+          <option value="AB+">AB+</option>
+          <option value="O-">O-</option>
+          <option value="A-">A-</option>
+          <option value="B-">B-</option>
+          <option value="AB-">AB-</option>
+        </select>
+      </label>
+      <br />
+      <br />
+      <input type="file" name="image" type="image/*" id="" />
+      <br />
+      <input type="submit" value="Submit" />
+      <br />
+      <span name="error" value="">{{error}}</span>
+    </form>
+  </body>
+</html>

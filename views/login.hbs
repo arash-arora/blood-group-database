@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>{{title}}</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <h1>login</h1>
+
+    <form action="/login" method="POST">
+      <input type="text" name="username" placeholder="username" />
+      <input type="password" name="password" placeholder="password" />
+      <button>login</button>
+    </form>
+
+    <h1>This is home page</h1>
+
+    <li><a href="/register">Sign up!!</a></li>
+    <li><a href="/login">Login</a></li>
+    <li><a href="/logout">Logout</a></li>
+    <li><a href="/blood-group">Blood Groups</a></li>
+    <li><a href="/user.html">Add New User</a></li>
+  </body>
+</html>

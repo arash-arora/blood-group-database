@@ -1,0 +1,29 @@
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <body>
+    {{#each det}}
+      <button
+        id={{@key}}
+        onclick="show({{@key}})"
+        {{!-- onclick="show({{@key}}, '{{name}}', '{{ph}}', '{{age}}', '{{bp_type}}', '{{file}}', '{{ext}}')" --}}
+      >{{@key}}</button>
+    {{/each}}
+    {{#each det}}
+      <div class="page" id="button{{@key}}">
+        <h1>BLOOD GROUP CARD</h1>
+        <h2>Name: {{name}}</h2>
+        <p>Phone Number: {{ph}}</p>
+        <p>Age: {{age}}</p>
+        <h4>Blood Group:{{bp_type}}</h4>
+        <img src="/uploads/{{file}}.{{ext}}" alt="" height="300" width="300" />
+      </div>
+    {{/each}}
+    <script>
+      var a; function show(q) { a=document.getElementById("button"+q);
+      a.classList.add("show"); }
+    </script>
+  </body>
+</html>
